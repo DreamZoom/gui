@@ -1,11 +1,9 @@
 <template>
-    <div>
+    <div class="gui-data-view">
         <slot :data="data"></slot>
     </div>
 </template>
 <script>
-import axios from "axios";
-
 export default {
     props:{
         url:String,
@@ -30,8 +28,11 @@ export default {
     },
     methods:{
         loadData(){
-            return axios.get(this.url,{params:this.params}).then((response)=>{
-                return Promise.resolve(response.data);
+            return  this.$http.get({
+                url:this.url,
+                data:{
+                    ...this.params
+                }
             });
         }
     }

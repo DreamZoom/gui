@@ -8,13 +8,12 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-
+const NODE_ENV = process.env.NODE_ENV;
+console.log(NODE_ENV);
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: {
-    app: './src/main.js'
-  },
+  
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
