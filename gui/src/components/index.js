@@ -1,6 +1,6 @@
 import vant from "vant";
-// import 'vant/lib/index.css';
-import { Lazyload } from 'vant';
+import 'vant/lib/index.css';
+
 
 import $http from './http';
 
@@ -10,6 +10,7 @@ import grid from "./grid";
 import media from "./media";
 import dataList from "./data-list";
 import dataView from "./data-view";
+import dataPaged from "./data-paged";
 
 const components ={
     page,
@@ -17,7 +18,8 @@ const components ={
     grid,
     media,
     "data-list":dataList,
-    'data-view':dataView
+    'data-view':dataView,
+    "data-paged":dataPaged,
 }
 
 const install = function(Vue, opts = {}) {
@@ -30,8 +32,8 @@ const install = function(Vue, opts = {}) {
     });
 
     console.log(vant);
-    // Vue.use(vant);
-    // Vue.use(Lazyload, {});
+     Vue.use(vant);
+ 
 
     Vue.prototype.$http=$http;
 };
