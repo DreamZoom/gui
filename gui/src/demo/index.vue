@@ -15,12 +15,15 @@
             </template>
         </gui-data-paged>
         
+        <gui-rich-editor v-model="test"></gui-rich-editor>
     </div>
 </template>
 <script>
     export default {
         data() {
-            return {}
+            return {
+                test:"hahahahaha"
+            }
         },
         methods: {
             filter(data) {

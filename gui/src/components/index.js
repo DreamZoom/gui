@@ -11,6 +11,7 @@ import media from "./media";
 import dataList from "./data-list";
 import dataView from "./data-view";
 import dataPaged from "./data-paged";
+import richEditor from "./rich-editor";
 
 const components ={
     page,
@@ -20,6 +21,7 @@ const components ={
     "data-list":dataList,
     'data-view':dataView,
     "data-paged":dataPaged,
+    "rich-editor":richEditor
 }
 
 const install = function(Vue, opts = {}) {
